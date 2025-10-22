@@ -117,3 +117,7 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+//linea sugerida por FireBase
+apply plugin: "com.google.gms.google-services"
+
