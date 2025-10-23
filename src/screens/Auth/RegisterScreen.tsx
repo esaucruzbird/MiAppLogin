@@ -53,7 +53,8 @@ export const RegisterScreen: React.FC<Props> = ({ navigation }) => {
       ) : (
         <>
           <Button title="Registrar" onPress={onRegister} />
-          <View style={{ height: 12 }} />
+          <View style={styles.spacer12} />
+          {/*<View style={{ height: 12 }} />*/}
           <Button title="Ir a Login" onPress={() => navigation.navigate('Login')} />
         </>
       )}
@@ -65,4 +66,6 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, justifyContent: 'center' },
   title: { fontSize: 22, marginBottom: 12, textAlign: 'center' },
   input: { borderWidth: 1, borderColor: '#ccc', padding: 10, borderRadius: 6, marginBottom: 10 },
+  spacer12: { height: 12 },
 });
+

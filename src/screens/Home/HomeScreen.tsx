@@ -20,7 +20,8 @@ export const HomeScreen: React.FC = () => {
       <Text style={styles.title}>Bienvenido</Text>
       <Text style={styles.item}>Nombre: {user?.displayName ?? '(sin nombre)'}</Text>
       <Text style={styles.item}>Correo: {user?.email ?? '(sin email)'}</Text>
-      <View style={{ height: 20 }} />
+      <View style={styles.spacer20} />
+      {/*<View style={{ height: 20 }} />*/}
       <Button title="Cerrar sesión" onPress={handleSignOut} />
     </View>
   );
@@ -30,4 +31,5 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, justifyContent: 'center' },
   title: { fontSize: 24, marginBottom: 16, textAlign: 'center' },
   item: { fontSize: 16, marginBottom: 6 },
+  spacer20: { height: 20 },
 });
