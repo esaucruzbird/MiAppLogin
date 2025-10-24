@@ -12,7 +12,12 @@
           "package_name": "com.miapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "410909323897-ghbd3dius5hlv6bkoauiq8f43fje3eq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBJOls58nkPcrnwa9P7APDP02aWpgBytJk"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410909323897-ghbd3dius5hlv6bkoauiq8f43fje3eq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

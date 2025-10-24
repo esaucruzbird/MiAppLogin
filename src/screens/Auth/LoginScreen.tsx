@@ -4,6 +4,9 @@ import { View, Text, TextInput, Button, StyleSheet, Alert, ActivityIndicator } f
 import { loginWithEmail } from '../../services/authService';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation';
+//para google
+import { signInWithGoogle } from '../../services/authService';
+
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
@@ -56,6 +59,15 @@ export const LoginScreen: React.FC<Props> = ({ navigation }) => {
           <View style={styles.spacer12} />
           {/*<View style={{ height: 12 }} />*/}
           <Button title="Crear cuenta" onPress={() => navigation.navigate('Register')} />
+          {/*para Google*/}
+          <Button title="Entrar con Google" onPress={async () => {
+            try {
+              await signInWithGoogle();
+              // onAuthStateChanged en navigation redirigirá a Home
+            } catch (err: any) {
+              Alert.alert('Error Google Sign-In', err.message ?? String(err));
+            }
+          }} />
         </>
       )}
     </View>
@@ -68,4 +80,3 @@ const styles = StyleSheet.create({
   input: { borderWidth: 1, borderColor: '#ccc', padding: 10, borderRadius: 6, marginBottom: 10 },
   spacer12: { height: 12 },
 });
-

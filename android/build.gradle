@@ -18,6 +18,8 @@ buildscript {
 
         //línea recomedada por FireBase para agregar dependencia (plugin de Google Services)
         classpath("com.google.gms:google-services:4.4.4")
+        //para implementacion con Google
+        classpath("com.google.android.gms:play-services-auth:20.5.0")
     }
 }
 
