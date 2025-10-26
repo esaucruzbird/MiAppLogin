@@ -59,6 +59,7 @@ export const LoginScreen: React.FC<Props> = ({ navigation }) => {
           <View style={styles.spacer12} />
           {/*<View style={{ height: 12 }} />*/}
           <Button title="Crear cuenta" onPress={() => navigation.navigate('Register')} />
+          <View style={styles.spacer12} />
           {/*para Google*/}
           <Button title="Entrar con Google" onPress={async () => {
             try {
